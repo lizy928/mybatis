@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-parent</artifactId>
-    <version>32-SNAPSHOT</version>
+    <version>32</version>
   </parent>
 
   <artifactId>mybatis</artifactId>
@@ -233,6 +233,12 @@
       <artifactId>velocity</artifactId>
       <version>1.7</version>
       <scope>test</scope>
+      <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.20</version>
     </dependency>
     <!-- postgresql driver is required to run the refcursor tests -->
     <dependency>
@@ -240,6 +246,20 @@
       <artifactId>postgresql</artifactId>
       <version>9.1-901-1.jdbc4</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>ognl</groupId>
+      <artifactId>ognl</artifactId>
+      <version>3.2.15</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.javassist</groupId>
+      <artifactId>javassist</artifactId>
+      <version>3.27.0-GA</version>
+      <scope>compile</scope>
+      <optional>true</optional>
     </dependency>
   </dependencies>
 
