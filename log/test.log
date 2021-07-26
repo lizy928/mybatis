@@ -1,0 +1,1474 @@
+2021-07-23 10:17:48 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:17:48 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:17:48 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:17:48 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:17:48 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:17:48 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:17:48 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:17:48 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:17:48 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:17:49 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 1388ms} 
+open connections:  1 (1)
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT `id`,
+               `title`,
+               `author_id`,
+               `content`,
+               `create_time`
+        FROM `article`
+        WHERE `author_id` = ?
+          AND `create_time` > ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6f95cd51
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:36)
+1. PreparedStatement.setString(1, "1") returned 
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:36)
+1. PreparedStatement.setString(2, "2018-06-10") returned 
+2021-07-23 10:17:49 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT `id`, `title`, `author_id`, `content`, `create_time` FROM `article` WHERE `author_id` 
+= '1' AND `create_time` > '2018-06-10'  {executed in 36 ms}
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@778ca8ef
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@907f2b7 - Field level information: 
+	com.mysql.cj.result.Field@435ce306[dbName=myblog,tableName=article,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@537b32ef[dbName=myblog,tableName=article,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@7dc51783[dbName=myblog,tableName=article,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@4b61d0c6[dbName=myblog,tableName=article,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@6f815e7f[dbName=myblog,tableName=article,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:313)
+1. ResultSet.next() returned true
+2021-07-23 10:17:49 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:313)
+1. ResultSet.next() returned true
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 8
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned Spring MVC 原理探秘 - 一个请求的旅行过程
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned Spring MVC 原理探秘 - 一个请求的旅行过程
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:390 - 
+|---|----------------------------|----------|----------------------------|----------------------|
+|id |title                       |author_id |content                     |create_time           |
+|---|----------------------------|----------|----------------------------|----------------------|
+|1  |MyBatis 源码分析系列文章导读          |1         |MyBatis 源码分析系列文章导读          |2018-07-15 23:30:09.0 |
+|8  |Spring MVC 原理探秘 - 一个请求的旅行过程 |1         |Spring MVC 原理探秘 - 一个请求的旅行过程 |2018-06-29 08:00:00.0 |
+|---|----------------------------|----------|----------------------------|----------------------|
+
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:313)
+1. ResultSet.next() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. PreparedStatement.getConnection() returned net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@181d7f28
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@df1cff6
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getMoreResults() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getUpdateCount() returned -1
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:17:50 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:24:36 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:24:36 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:24:36 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:24:36 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:24:36 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:24:37 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:24:37 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:24:37 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:24:37 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:24:38 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 1515ms} 
+open connections:  1 (1)
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT `id`,
+               `title`,
+               `author_id`,
+               `content`,
+               `create_time`
+        FROM `article`
+        WHERE `author_id` = ?
+          AND `create_time` > ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4c9e9fb8
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:36)
+1. PreparedStatement.setString(1, "1") returned 
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.setNonNullParameter(StringTypeHandler.java:36)
+1. PreparedStatement.setString(2, "2018-06-10") returned 
+2021-07-23 10:24:38 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT `id`, `title`, `author_id`, `content`, `create_time` FROM `article` WHERE `author_id` 
+= '1' AND `create_time` > '2018-06-10'  {executed in 56 ms}
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1358b28e
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@208e9ef6 - Field level information: 
+	com.mysql.cj.result.Field@78b236a0[dbName=myblog,tableName=article,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@261d8190[dbName=myblog,tableName=article,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@34448e6c[dbName=myblog,tableName=article,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@60e9df3c[dbName=myblog,tableName=article,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@907f2b7[dbName=myblog,tableName=article,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:313)
+1. ResultSet.next() returned true
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:313)
+1. ResultSet.next() returned true
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 8
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned Spring MVC 原理探秘 - 一个请求的旅行过程
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned Spring MVC 原理探秘 - 一个请求的旅行过程
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:390 - 
+|---|----------------------------|----------|----------------------------|----------------------|
+|id |title                       |author_id |content                     |create_time           |
+|---|----------------------------|----------|----------------------------|----------------------|
+|1  |MyBatis 源码分析系列文章导读          |1         |MyBatis 源码分析系列文章导读          |2018-07-15 23:30:09.0 |
+|8  |Spring MVC 原理探秘 - 一个请求的旅行过程 |1         |Spring MVC 原理探秘 - 一个请求的旅行过程 |2018-06-29 08:00:00.0 |
+|---|----------------------------|----------|----------------------------|----------------------|
+
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:313)
+1. ResultSet.next() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. PreparedStatement.getConnection() returned net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4fbb001b
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@7f4037ed
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getMoreResults() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getUpdateCount() returned -1
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:24:38 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:42:18 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:42:18 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:42:18 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:42:18 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:42:18 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:42:19 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:42:19 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:42:19 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:42:19 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:42:57 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:42:57 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:42:57 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:42:57 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:42:57 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:42:58 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:42:58 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:42:58 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:42:58 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:42:59 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 1616ms} 
+open connections:  1 (1)
+2021-07-23 10:42:59 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:42:59 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:42:59 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:42:59 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT
+        ar.id, ar.author_id, ar.title, ar.type, ar.content,
+        ar.create_time, au.name, au.age, au.sex, au.email
+        FROM
+        article ar, author au
+        WHERE
+        ar.author_id = au.id AND ar.id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@21ae6e73
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.setNonNullParameter(IntegerTypeHandler.java:36)
+1. PreparedStatement.setInt(1, 1) returned 
+2021-07-23 10:43:00 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT ar.id, ar.author_id, ar.title, ar.type, ar.content, ar.create_time, au.name, au.age, 
+au.sex, au.email FROM article ar, author au WHERE ar.author_id = au.id AND ar.id = 1  {executed in 41 ms}
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@304b9f1a
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@7daa61f3 - Field level information: 
+	com.mysql.cj.result.Field@62315f22[dbName=myblog,tableName=ar,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@6e4ea0bd[dbName=myblog,tableName=ar,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@56f2bbea[dbName=myblog,tableName=ar,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@78f9ed3e[dbName=myblog,tableName=ar,originalTableName=article,columnName=type,originalColumnName=type,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1059754c[dbName=myblog,tableName=ar,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@b0964b2[dbName=myblog,tableName=ar,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@48e7b3d2[dbName=myblog,tableName=au,originalTableName=author,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@7f4037ed[dbName=myblog,tableName=au,originalTableName=author,columnName=age,originalColumnName=age,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@24e8de5c[dbName=myblog,tableName=au,originalTableName=author,columnName=sex,originalColumnName=sex,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@64040287[dbName=myblog,tableName=au,originalTableName=author,columnName=email,originalColumnName=email,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 8
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:43:00 [main] INFO  log4j2:390 - 
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|id |author_id |title              |type |content            |create_time           |name         |age |sex |email                    |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|1  |1         |MyBatis 源码分析系列文章导读 |8    |MyBatis 源码分析系列文章导读 |2018-07-15 23:30:09.0 |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:43:00 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:44:05 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:44:05 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:44:05 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:44:05 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:44:05 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:44:05 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:44:05 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:44:05 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:44:05 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:44:07 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 1418ms} 
+open connections:  1 (1)
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT
+        ar.id, ar.author_id, ar.title, ar.type, ar.content,
+        ar.create_time, au.name, au.age, au.sex, au.email
+        FROM
+        article ar, author au
+        WHERE
+        ar.author_id = au.id AND ar.id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3af37506
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.setNonNullParameter(IntegerTypeHandler.java:36)
+1. PreparedStatement.setInt(1, 1) returned 
+2021-07-23 10:44:07 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT ar.id, ar.author_id, ar.title, ar.type, ar.content, ar.create_time, au.name, au.age, 
+au.sex, au.email FROM article ar, author au WHERE ar.author_id = au.id AND ar.id = 1  {executed in 39 ms}
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@7dc51783
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@107e5441 - Field level information: 
+	com.mysql.cj.result.Field@4aeaadc1[dbName=myblog,tableName=ar,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@263558c9[dbName=myblog,tableName=ar,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1f14f20c[dbName=myblog,tableName=ar,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@7daa61f3[dbName=myblog,tableName=ar,originalTableName=article,columnName=type,originalColumnName=type,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@62315f22[dbName=myblog,tableName=ar,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@6e4ea0bd[dbName=myblog,tableName=ar,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@56f2bbea[dbName=myblog,tableName=au,originalTableName=author,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@78f9ed3e[dbName=myblog,tableName=au,originalTableName=author,columnName=age,originalColumnName=age,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1059754c[dbName=myblog,tableName=au,originalTableName=author,columnName=sex,originalColumnName=sex,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@b0964b2[dbName=myblog,tableName=au,originalTableName=author,columnName=email,originalColumnName=email,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 8
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-07-15 23:30:09.0
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.UnknownTypeHandler.resolveTypeHandler(UnknownTypeHandler.java:89)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@39ce27f2 - Field level information: 
+	com.mysql.cj.result.Field@4aeaadc1[dbName=myblog,tableName=ar,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@263558c9[dbName=myblog,tableName=ar,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1f14f20c[dbName=myblog,tableName=ar,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@7daa61f3[dbName=myblog,tableName=ar,originalTableName=article,columnName=type,originalColumnName=type,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@62315f22[dbName=myblog,tableName=ar,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@6e4ea0bd[dbName=myblog,tableName=ar,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@56f2bbea[dbName=myblog,tableName=au,originalTableName=author,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@78f9ed3e[dbName=myblog,tableName=au,originalTableName=author,columnName=age,originalColumnName=age,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1059754c[dbName=myblog,tableName=au,originalTableName=author,columnName=sex,originalColumnName=sex,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@b0964b2[dbName=myblog,tableName=au,originalTableName=author,columnName=email,originalColumnName=email,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(name) returned coolblog.xyz
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:390 - 
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|id |author_id |title              |type |content            |create_time           |name         |age |sex |email                    |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|1  |1         |MyBatis 源码分析系列文章导读 |8    |MyBatis 源码分析系列文章导读 |2018-07-15 23:30:09.0 |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:44:07 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:46:05 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:46:05 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:46:05 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:46:05 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:46:05 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:46:05 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:46:05 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:46:06 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:46:06 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:46:07 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 1543ms} 
+open connections:  1 (1)
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT
+        ar.id, ar.author_id, ar.title, ar.type, ar.content,
+        ar.create_time, au.name, au.age, au.sex, au.email
+        FROM
+        article ar, author au
+        WHERE
+        ar.author_id = au.id AND ar.id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5a4ed68f
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.setNonNullParameter(IntegerTypeHandler.java:36)
+1. PreparedStatement.setInt(1, 1) returned 
+2021-07-23 10:46:07 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT ar.id, ar.author_id, ar.title, ar.type, ar.content, ar.create_time, au.name, au.age, 
+au.sex, au.email FROM article ar, author au WHERE ar.author_id = au.id AND ar.id = 1  {executed in 31 ms}
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@7f4037ed
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@4925f4f5 - Field level information: 
+	com.mysql.cj.result.Field@1ad926d3[dbName=myblog,tableName=ar,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@3a43d133[dbName=myblog,tableName=ar,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@39ce27f2[dbName=myblog,tableName=ar,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@5f2afe62[dbName=myblog,tableName=ar,originalTableName=article,columnName=type,originalColumnName=type,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@c96a4ea[dbName=myblog,tableName=ar,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@28782602[dbName=myblog,tableName=ar,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@60c16548[dbName=myblog,tableName=au,originalTableName=author,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@68105edc[dbName=myblog,tableName=au,originalTableName=author,columnName=age,originalColumnName=age,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@511816c0[dbName=myblog,tableName=au,originalTableName=author,columnName=sex,originalColumnName=sex,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@38b972d7[dbName=myblog,tableName=au,originalTableName=author,columnName=email,originalColumnName=email,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 8
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-07-15 23:30:09.0
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(name) returned coolblog.xyz
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(age) returned 28
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:49)
+1. ResultSet.getInt(sex) returned 0
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:50)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(email) returned coolblog.xyz@outlook.com
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:390 - 
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|id |author_id |title              |type |content            |create_time           |name         |age |sex |email                    |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|1  |1         |MyBatis 源码分析系列文章导读 |8    |MyBatis 源码分析系列文章导读 |2018-07-15 23:30:09.0 |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. PreparedStatement.getConnection() returned net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@654b72c0
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@7fcff1b9
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getMoreResults() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getUpdateCount() returned -1
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:46:07 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:46:50 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:46:50 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:46:50 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:46:50 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:46:50 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:46:51 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:46:51 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:46:51 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:46:51 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:46:53 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 1617ms} 
+open connections:  1 (1)
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT
+        ar.id, ar.author_id, ar.title, ar.type, ar.content,
+        ar.create_time, au.name, au.age, au.sex, au.email
+        FROM
+        article ar, author au
+        WHERE
+        ar.author_id = au.id AND ar.id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@76304b46
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.setNonNullParameter(IntegerTypeHandler.java:36)
+1. PreparedStatement.setInt(1, 1) returned 
+2021-07-23 10:46:53 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT ar.id, ar.author_id, ar.title, ar.type, ar.content, ar.create_time, au.name, au.age, 
+au.sex, au.email FROM article ar, author au WHERE ar.author_id = au.id AND ar.id = 1  {executed in 39 ms}
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@907f2b7
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@65e7f52a - Field level information: 
+	com.mysql.cj.result.Field@304b9f1a[dbName=myblog,tableName=ar,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@75699e35[dbName=myblog,tableName=ar,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@107e5441[dbName=myblog,tableName=ar,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@4aeaadc1[dbName=myblog,tableName=ar,originalTableName=article,columnName=type,originalColumnName=type,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@263558c9[dbName=myblog,tableName=ar,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@1f14f20c[dbName=myblog,tableName=ar,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@7daa61f3[dbName=myblog,tableName=au,originalTableName=author,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@62315f22[dbName=myblog,tableName=au,originalTableName=author,columnName=age,originalColumnName=age,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@6e4ea0bd[dbName=myblog,tableName=au,originalTableName=author,columnName=sex,originalColumnName=sex,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@56f2bbea[dbName=myblog,tableName=au,originalTableName=author,columnName=email,originalColumnName=email,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 8
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-07-15 23:30:09.0
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(name) returned coolblog.xyz
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(age) returned 28
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:49)
+1. ResultSet.getInt(sex) returned 0
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:50)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(email) returned coolblog.xyz@outlook.com
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:390 - 
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|id |author_id |title              |type |content            |create_time           |name         |age |sex |email                    |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|1  |1         |MyBatis 源码分析系列文章导读 |8    |MyBatis 源码分析系列文章导读 |2018-07-15 23:30:09.0 |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. PreparedStatement.getConnection() returned net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@344b8190
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@5f2afe62
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getMoreResults() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getUpdateCount() returned -1
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:46:53 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:50:17 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:50:17 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:50:17 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:50:17 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:50:17 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:50:18 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:50:18 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:50:18 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:50:18 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:50:24 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 4036ms} 
+open connections:  1 (1)
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT
+        ar.id, ar.author_id, ar.title, ar.type, ar.content,
+        ar.create_time, au.name, au.age, au.sex, au.email
+        FROM
+        article ar, author au
+        WHERE
+        ar.author_id = au.id AND ar.id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@39ce27f2
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.setNonNullParameter(IntegerTypeHandler.java:36)
+1. PreparedStatement.setInt(1, 1) returned 
+2021-07-23 10:50:24 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT ar.id, ar.author_id, ar.title, ar.type, ar.content, ar.create_time, au.name, au.age, 
+au.sex, au.email FROM article ar, author au WHERE ar.author_id = au.id AND ar.id = 1  {executed in 140 ms}
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@502f8b57
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@779dfe55 - Field level information: 
+	com.mysql.cj.result.Field@323659f8[dbName=myblog,tableName=ar,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1144a55a[dbName=myblog,tableName=ar,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@3e521715[dbName=myblog,tableName=ar,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@26a529dc[dbName=myblog,tableName=ar,originalTableName=article,columnName=type,originalColumnName=type,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@265c5d69[dbName=myblog,tableName=ar,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@1286528d[dbName=myblog,tableName=ar,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@3cc20577[dbName=myblog,tableName=au,originalTableName=author,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@33a630fa[dbName=myblog,tableName=au,originalTableName=author,columnName=age,originalColumnName=age,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@775594f2[dbName=myblog,tableName=au,originalTableName=author,columnName=sex,originalColumnName=sex,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@5767b2af[dbName=myblog,tableName=au,originalTableName=author,columnName=email,originalColumnName=email,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 8
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-07-15 23:30:09.0
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:50:24 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(name) returned coolblog.xyz
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(age) returned 28
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:49)
+1. ResultSet.getInt(sex) returned 0
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:50)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(email) returned coolblog.xyz@outlook.com
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:390 - 
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|id |author_id |title              |type |content            |create_time           |name         |age |sex |email                    |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|1  |1         |MyBatis 源码分析系列文章导读 |8    |MyBatis 源码分析系列文章导读 |2018-07-15 23:30:09.0 |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. PreparedStatement.getConnection() returned net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@22d6cac2
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@1d2644e3
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getMoreResults() returned false
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getUpdateCount() returned -1
+2021-07-23 10:50:25 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:50:41 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:50:41 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:50:41 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:50:41 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:51:03 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:51:03 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:51:03 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:51:03 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:51:03 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:51:04 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:51:04 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:51:04 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:51:04 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:51:19 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 4341ms} 
+open connections:  1 (1)
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT
+        ar.id, ar.author_id, ar.title, ar.type, ar.content,
+        ar.create_time, au.name, au.age, au.sex, au.email
+        FROM
+        article ar, author au
+        WHERE
+        ar.author_id = au.id AND ar.id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@60c16548
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.setNonNullParameter(IntegerTypeHandler.java:36)
+1. PreparedStatement.setInt(1, 1) returned 
+2021-07-23 10:51:19 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT ar.id, ar.author_id, ar.title, ar.type, ar.content, ar.create_time, au.name, au.age, 
+au.sex, au.email FROM article ar, author au WHERE ar.author_id = au.id AND ar.id = 1  {executed in 143 ms}
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@794b435f
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@26a529dc - Field level information: 
+	com.mysql.cj.result.Field@265c5d69[dbName=myblog,tableName=ar,originalTableName=article,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@1286528d[dbName=myblog,tableName=ar,originalTableName=article,columnName=author_id,originalColumnName=author_id,mysqlType=3(FIELD_TYPE_INT),sqlType=4,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@3cc20577[dbName=myblog,tableName=ar,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@33a630fa[dbName=myblog,tableName=ar,originalTableName=article,columnName=type,originalColumnName=type,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@775594f2[dbName=myblog,tableName=ar,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@5767b2af[dbName=myblog,tableName=ar,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@7b22ec89[dbName=myblog,tableName=au,originalTableName=author,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@790132f7[dbName=myblog,tableName=au,originalTableName=author,columnName=age,originalColumnName=age,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@2228db21[dbName=myblog,tableName=au,originalTableName=author,columnName=sex,originalColumnName=sex,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@48b0e701[dbName=myblog,tableName=au,originalTableName=author,columnName=email,originalColumnName=email,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 8
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-07-15 23:30:09.0
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(author_id) returned 1
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(name) returned coolblog.xyz
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(age) returned 28
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:49)
+1. ResultSet.getInt(sex) returned 0
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:50)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(email) returned coolblog.xyz@outlook.com
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:51:19 [main] INFO  log4j2:390 - 
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|id |author_id |title              |type |content            |create_time           |name         |age |sex |email                    |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+|1  |1         |MyBatis 源码分析系列文章导读 |8    |MyBatis 源码分析系列文章导读 |2018-07-15 23:30:09.0 |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |
+|---|----------|-------------------|-----|-------------------|----------------------|-------------|----|----|-------------------------|
+
+2021-07-23 10:51:19 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned false
+2021-07-23 10:51:20 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:51:20 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. PreparedStatement.getConnection() returned net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@3163987e
+2021-07-23 10:51:20 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@705202d1
+2021-07-23 10:51:20 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getMoreResults() returned false
+2021-07-23 10:51:20 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getUpdateCount() returned -1
+2021-07-23 10:51:20 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:51:42 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:51:42 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:51:42 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:51:42 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:54:08 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization...
+2021-07-23 10:54:08 [main] DEBUG debug:372 - Using logger: null
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.debug.stack.prefix is not defined
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.sqltiming.warn.threshold is not defined
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.sqltiming.error.threshold is not defined
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.statement.warn is not defined (using default value false)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.sql.select is not defined (using default value true)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.sql.update is not defined (using default value true)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.sql.create is not defined (using default value true)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.drivers is not defined
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.trim.sql is not defined (using default value true)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2021-07-23 10:54:08 [main] DEBUG debug:372 - log4jdbc-logj2 properties initialization done.
+2021-07-23 10:54:08 [main] DEBUG debug:372 - DriverSpy intialization...
+2021-07-23 10:54:08 [main] DEBUG debug:372 -   FOUND DRIVER com.mysql.jdbc.Driver
+2021-07-23 10:54:08 [main] DEBUG debug:372 -   FOUND DRIVER org.apache.derby.jdbc.EmbeddedDriver
+2021-07-23 10:54:08 [main] DEBUG debug:372 -   FOUND DRIVER org.hsqldb.jdbcDriver
+2021-07-23 10:54:08 [main] DEBUG debug:372 -   FOUND DRIVER org.postgresql.Driver
+2021-07-23 10:54:08 [main] DEBUG debug:372 - DriverSpy intialization done.
+2021-07-23 10:54:10 [main] INFO  log4j2:365 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection opened. {executed in 1503ms} 
+open connections:  1 (1)
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  java.sql.DriverManager.getConnection(DriverManager.java:677)
+1. Connection.new Connection returned 
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:461)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned true
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(false) returned 
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. PreparedStatement.new PreparedStatement returned 
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.prepareStatement(SELECT au.id,
+               au.name,
+               au.age,
+               au.sex,
+               au.email,
+               ar.id as article_id,
+               ar.title,
+               ar.type,
+               ar.content,
+               ar.create_time
+        FROM author au,
+             article ar
+        WHERE au.id = ar.author_id
+          AND au.id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2c383e33
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.setNonNullParameter(IntegerTypeHandler.java:36)
+1. PreparedStatement.setInt(1, 1) returned 
+2021-07-23 10:54:10 [main] INFO  log4j2:243 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. SELECT au.id, au.name, au.age, au.sex, au.email, ar.id as article_id, ar.title, ar.type, ar.content, 
+ar.create_time FROM author au, article ar WHERE au.id = ar.author_id AND au.id = 1  {executed in 38 ms}
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:67)
+1. PreparedStatement.execute() returned true
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. ResultSet.new ResultSet returned 
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getFirstResultSet(DefaultResultSetHandler.java:194)
+1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@34448e6c
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.ResultSetWrapper.<init>(ResultSetWrapper.java:56)
+1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@4b61d0c6 - Field level information: 
+	com.mysql.cj.result.Field@6f815e7f[dbName=myblog,tableName=au,originalTableName=author,columnName=id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@65e7f52a[dbName=myblog,tableName=au,originalTableName=author,columnName=name,originalColumnName=name,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@304b9f1a[dbName=myblog,tableName=au,originalTableName=author,columnName=age,originalColumnName=age,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@75699e35[dbName=myblog,tableName=au,originalTableName=author,columnName=sex,originalColumnName=sex,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@107e5441[dbName=myblog,tableName=au,originalTableName=author,columnName=email,originalColumnName=email,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@4aeaadc1[dbName=myblog,tableName=ar,originalTableName=article,columnName=article_id,originalColumnName=id,mysqlType=3(FIELD_TYPE_INT UNSIGNED),sqlType=4,flags= AUTO_INCREMENT PRIMARY_KEY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@263558c9[dbName=myblog,tableName=ar,originalTableName=article,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@1f14f20c[dbName=myblog,tableName=ar,originalTableName=article,columnName=type,originalColumnName=type,mysqlType=1(FIELD_TYPE_TINYINT),sqlType=-6,flags=, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@7daa61f3[dbName=myblog,tableName=ar,originalTableName=article,columnName=content,originalColumnName=content,mysqlType=252(FIELD_TYPE_TEXT),sqlType=-1,flags= BLOB, charsetIndex=33, charsetName=UTF-8]
+	com.mysql.cj.result.Field@62315f22[dbName=myblog,tableName=ar,originalTableName=article,columnName=create_time,originalColumnName=create_time,mysqlType=12(FIELD_TYPE_DATETIME),sqlType=93,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.skipRows(DefaultResultSetHandler.java:338)
+1. ResultSet.getType() returned 1003
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(name) returned coolblog.xyz
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(age) returned 28
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:49)
+1. ResultSet.getInt(sex) returned 0
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.EnumOrdinalTypeHandler.getNullableResult(EnumOrdinalTypeHandler.java:50)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(email) returned coolblog.xyz@outlook.com
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 8
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned MyBatis 源码分析系列文章导读
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-07-15 23:30:09.0
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 3
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 3
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 3
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned Java CAS 原理分析
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned Java CAS 原理分析
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-05-15 23:28:33.0
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 4
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 4
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 4
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned Spring IOC 容器源码分析 - 获取单例 bean
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 4
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned Spring IOC 容器源码分析 - 获取单例 bean
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-06-01 08:00:00.0
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 5
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 5
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 5
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned Spring IOC 容器源码分析 - 循环依赖的解决办法
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 4
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned Spring IOC 容器源码分析 - 循环依赖的解决办法
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-06-08 08:00:00.0
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned true
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(id) returned 1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 8
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 8
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:42)
+1. ResultSet.getInt(article_id) returned 8
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(title) returned Spring MVC 原理探秘 - 一个请求的旅行过程
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  com.lizy.mytest.typehandler.ArticleTypeHandler.getNullableResult(ArticleTypeHandler.java:29)
+1. ResultSet.getInt(type) returned 4
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.StringTypeHandler.getNullableResult(StringTypeHandler.java:42)
+1. ResultSet.getString(content) returned Spring MVC 原理探秘 - 一个请求的旅行过程
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.DateTypeHandler.getNullableResult(DateTypeHandler.java:39)
+1. ResultSet.getTimestamp(create_time) returned 2018-06-29 08:00:00.0
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:67)
+1. ResultSet.wasNull() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:390 - 
+|---|-------------|----|----|-------------------------|---|------------------------------|-----|------------------------------|----------------------|
+|id |name         |age |sex |email                    |id |title                         |type |content                       |create_time           |
+|---|-------------|----|----|-------------------------|---|------------------------------|-----|------------------------------|----------------------|
+|1  |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |1  |MyBatis 源码分析系列文章导读            |8    |MyBatis 源码分析系列文章导读            |2018-07-15 23:30:09.0 |
+|1  |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |3  |Java CAS 原理分析                 |1    |Java CAS 原理分析                 |2018-05-15 23:28:33.0 |
+|1  |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |4  |Spring IOC 容器源码分析 - 获取单例 bean |4    |Spring IOC 容器源码分析 - 获取单例 bean |2018-06-01 08:00:00.0 |
+|1  |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |5  |Spring IOC 容器源码分析 - 循环依赖的解决办法 |4    |Spring IOC 容器源码分析 - 循环依赖的解决办法 |2018-06-08 08:00:00.0 |
+|1  |coolblog.xyz |28  |0   |coolblog.xyz@outlook.com |8  |Spring MVC 原理探秘 - 一个请求的旅行过程   |4    |Spring MVC 原理探秘 - 一个请求的旅行过程   |2018-06-29 08:00:00.0 |
+|---|-------------|----|----|-------------------------|---|------------------------------|-----|------------------------------|----------------------|
+
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForNestedResultMap(DefaultResultSetHandler.java:802)
+1. ResultSet.next() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.closeResultSet(DefaultResultSetHandler.java:230)
+1. ResultSet.close() returned void
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. PreparedStatement.getConnection() returned net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7f4d9395
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:214)
+1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@511816c0
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getMoreResults() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getNextResultSet(DefaultResultSetHandler.java:216)
+1. PreparedStatement.getUpdateCount() returned -1
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:308)
+1. PreparedStatement.close() returned 
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.getAutoCommit() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. Connection.setAutoCommit(true) returned 
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pingConnection(PooledDataSource.java:512)
+1. Connection.isClosed() returned false
+2021-07-23 10:54:10 [main] INFO  log4j2:197 -  org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection(PooledDataSource.java:351)
+1. Connection.getAutoCommit() returned true

@@ -23,6 +23,8 @@ public class MainTest {
     try (SqlSession session = sqlSessionFactory.openSession()) {
       Blog blog = (Blog) session.selectOne("com.lizy.mytest.mapper.BlogMapper.selectBlog", 101);
       System.out.println(blog.getTitle());
+
+
     }
   }
 

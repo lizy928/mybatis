@@ -13,22 +13,10 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package org.apache.ibatis.mapping;
+package com.lizy.mytest.domain;
 
-/**
- * Represents the content of a mapped statement read from an XML file or an annotation. 
- * It creates the SQL that will be passed to the database out of the input parameter received from the user.
- *
- * @author Clinton Begin
- */
-/**
- * SQL源码
- *
- * 表示从 XML 文件或注释读取的映射语句的内容。它根据从用户收到的输入参数创建将传递到数据库的 SQL。
- * 
- */
-public interface SqlSource {
+import java.io.Serializable;
 
-  BoundSql getBoundSql(Object parameterObject);
-
+public enum Section implements Serializable {
+  NEWS, VIDEOS, IMAGES, PODCASTS
 }
